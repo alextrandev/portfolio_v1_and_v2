@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital@0;1&family=Oswald:wght@200;300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: #05112C;
+}
+
+body {
+    font-family: 'Old Standard TT', serif;
+    background: #3E92CC;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background: #FFFAFF;
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+header img {
+    filter: drop-shadow(0px 0px 2px #3E92CC);
+    width: 100%;
+}
+
+header img:hover {
+    filter: drop-shadow(0px 0px 4px #D8315B)
+}
+
+main {
+    background: #FFFAFF;
+    margin-top: 1rem;
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+h1 {
+    margin-left: 2rem;
+}
+
+h1 img {
+    height: 2.5rem;
+    margin: 1rem;
+}
+
+h1,
+h2 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+h3 {
+        font-family: 'Oswald', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+    padding: 2rem;
+}
+
+.flagContainer {
+        background: #E5E1E5;
+        box-shadow: 0px 0px 5px rgb(204, 204, 204);
+        border-radius: 1rem;
+        overflow: hidden;
+}
+
+.flagContainer:hover {
+    box-shadow: 0px 0px 10px rgb(136, 136, 136);
+}
+
+li img {
+    width: 100%;
+    transform: scale(auto)
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    gap: 2rem;
+    grid-template-rows: auto;
+}
+
+.gridItem {
+    border-radius: 1rem;
+}
+
+.gridItem h3 {
+    padding-top: 0.5rem;
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+    height: fit-content;
+}
+
+.bannerSection,
+.infoSection,
+.mapSection,
+.bannerNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flagAndCoaContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+}
+
+.flagAndCoaContainer img {
+    width: 100%;
+    align-self: center;
+}
+
+.flagAndCoaContainer p {
+    text-align: center;
+    font-style: italic;
+}
+
+.infoContainer,
+.mapContainer {
+    padding: 2rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mapContainer {
+    height: 90vh;
+}
+
+.infoList {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.title {
+    text-align: end;
+    font-weight: bold;
+}
+
+.title,
+.value {
+    padding: 0.2rem;
+    padding-bottom: 1rem;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    background: #FFFAFF;
+    border-radius: 1rem;
+    padding: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}

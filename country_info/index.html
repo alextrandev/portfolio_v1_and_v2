@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Countries Info</title>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img src="assets/logo.svg" alt="Country info website logo" />
+      </div>
+    </header>
+    <main id="countryContainer" style="display: none">
+      <section class="bannerSection">
+        <h1 style="display: flex; align-items: center">
+          <img src="assets/textDecorationArrow.svg" alt="Decoration" />
+          <div class="bannerNameContainer">
+            <span id="countryName"></span>
+            <div>
+              <span>Official name: </span>
+              <span id="officialName"></span>
+            </div>
+          </div>
+          <img
+            src="assets/textDecorationArrow.svg"
+            alt="Decoration"
+            style="rotate: 180deg"
+          />
+        </h1>
+        <div class="flagAndCoaContainer">
+          <img id="flag" />
+          <img id="coa" alt="Country coat of arms" />
+          <p id="flagAlt"></p>
+          <p><span id="countryNameCoa"></span> Coat of Arms</p>
+        </div>
+        <img src="assets/lineDecoration.svg" style="width: 60%; margin: 3rem" />
+      </section>
+      <section class="infoSection">
+        <div class="infoContainer">
+          <h2>Fact about <span id="countryNameFact"></span></h2>
+          <ul class="infoList">
+            <li class="title">CCA3 code:</li>
+            <li class="value" id="cca3"></li>
+            <li class="title">Area:</li>
+            <li class="value" id="area"></li>
+            <li class="title">Capital:</li>
+            <li class="value" id="capital"></li>
+            <li class="title">Population:</li>
+            <li class="value" id="population"></li>
+            <li class="title">Region:</li>
+            <li class="value" id="region"></li>
+            <li class="title">Language:</li>
+            <li class="value" id="language"></li>
+            <li class="title">Subregion:</li>
+            <li class="value" id="subregion"></li>
+            <li class="title">Currency:</li>
+            <li class="value" id="currency">Euro €</li>
+          </ul>
+        </div>
+        <img
+          src="assets/lineDecoration.svg"
+          style="width: 60%; margin: 3rem; align-self: center"
+        />
+      </section>
+      <section class="mapSection" style="display: none">
+        <div class="mapContainer">
+          <h2>Map of <span id="countryNameMap">Andorra</span></h2>
+          <iframe
+            width="100%"
+            height="100%"
+            style="border: 0; padding-top: 2rem"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=
+                &q=Space+Needle,Seattle+WA"
+          >
+          </iframe>
+        </div>
+      </section>
+    </main>
+    <main>
+      <section>
+        <h2>Country:</h2>
+        <ul class="gridContainer"></ul>
+      </section>
+    </main>
+    <footer>this is a footer</footer>
+  </body>
+  <script src="main.js"></script>
+</html>
