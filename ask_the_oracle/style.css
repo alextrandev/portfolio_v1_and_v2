@@ -1,0 +1,66 @@
+body {
+background-color: #271957;
+font-family: 'Wonderworld';
+font-size: 20px;
+
+ }
+
+ /* copy paste button css from copy-paste-css.com */
+button {
+display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 20px;
+    height: 30px;
+    padding: 0px 15px;
+    text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
+    background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
+    transition: all 0.5s ease 0s;
+
+    :hover {
+        box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
+        transition: all 0.1s ease 0s;
+    }
+}
+
+.container {
+    position: relative;
+    display: inline-block;
+}
+
+.image {
+    height: 890px;
+    padding-left: 10vh;
+}
+
+.text {
+    position: absolute;
+    top: 18.5%;
+    left: 25.3%;
+    width: 541px;
+    height: 166px;
+    border-radius: 60px;
+    background-color: transparent;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 20px;
+    padding-top: 10px;
+}
+
+.button {
+    position: absolute;
+    top: 32%;
+    left: 40%;
+    width: 220px;
+    height: 50px;
+    font-family: 'Wonderworld';
+}
+
+@font-face {
+    font-family: "Wonderworld";
+    src: local('Wonderworld'),
+        url('DsMysticora-d9dZ.ttf') format('truetype');
+}

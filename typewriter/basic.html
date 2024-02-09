@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Typewriter App</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="images/typewritter.webp" type="image/x-icon" />
+  </head>
+  <body>
+    <section>
+      <div class="main">
+        <p id="displayText"></p>
+      </div>
+      <div class="input">
+        <input
+          type="text"
+          id="input"
+          placeholder="Start typing... "
+          autofocus
+          onfocus="this.select()"
+        />
+        <img src="images/typewritter.webp" alt="" />
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

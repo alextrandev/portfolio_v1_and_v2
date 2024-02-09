@@ -1,0 +1,66 @@
+body {
+    background-image: url(images/backGround.jpeg);
+    background-color: black;
+    background-size: 100vw;
+    color: green;
+    font-size: 2rem;
+    font-family:'Typewritter';
+    position: fixed;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main {
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    height: 32%;
+}
+
+p {
+    margin: 0;
+    text-shadow: 1px 1px 10px green, 1px 1px 10px green;
+    opacity: 90%;
+    display: inline;
+}
+
+.input {
+    display: flex;
+    height: 50%;
+    width: 30%;
+    justify-content: center;
+    opacity: 30%;
+}
+
+input {
+    bottom: 40%;
+    margin-left: 1.1%;
+    position: absolute;
+    font-size: 27px;
+}
+
+.textCurser {
+    animation: blinker 1s linear infinite;
+    font-size: 45px;
+    margin-left: -5px;
+}
+
+@font-face {
+    font-family: Typewritter;
+    src: url(elegantTypewriter.ttf);
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
