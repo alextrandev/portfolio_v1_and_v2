@@ -14,6 +14,7 @@
           class="imageDefault"
           src="images/pancakeClassic.webp"
           alt="Pancake Image"
+          style="visibility: visible"
         />
         <img src="images/pancakeNuts.webp" alt="Pancake nuts topping Image" />
         <img
@@ -85,6 +86,28 @@
         </div>
         <div class="price-display">
           <h3>Total Price: €<span class="totalPrice">5.00</span></h3>
+          <img class="button" src="confirmButton.svg" alt="Confirm Button" />
+        </div>
+      </div>
+      <div class="confirm-container">
+        <label for="backToOrder">
+          <p id="backToOrder">&lt; Back to order</p>
+        </label>
+        <h2>Order confirmation</h2>
+        <div class="customization-section">
+          <p>Pancake type: <span id="pancakeTypeConfirm">abc</span></p>
+          <p>
+            Topping(s) and extra(s):
+            <span id="toppingExtraConfirm">a, b, c</span>
+            <h2>Delivery info</h2>
+            <p>Name: <input type="text" name="customerAddress" id="customerAddress"></p>
+            <p>Address: <input type="text" name="customerAddress" id="customerAddress"></p>
+            <p>Note: <input type="text" name="customerNote" id="customerNote"></p>
+          </p>
+        </div>
+        <div class="price-display">
+          <h3>Total Price: €<span class="totalPrice">5.00</span></h3>
+          <img class="button" src="orderButton.svg" alt="Confirm Button" />
         </div>
       </div>
     </div>
