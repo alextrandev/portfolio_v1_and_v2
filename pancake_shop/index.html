@@ -16,17 +16,17 @@
           alt="Pancake Image"
           style="visibility: visible"
         />
-        <img class="toppingImage" src="images/pancakeNuts.webp" alt="Pancake nuts topping Image" />
-        <img class="toppingImage"
+        <img class="toppingImage" id="nutsImage" src="images/pancakeNuts.webp" alt="Pancake nuts topping Image" />
+        <img class="toppingImage" id="bananasImage"
           src="images/pancakeBananas.webp"
           alt="Pancake bananas topping Image"
         />
-        <img class="toppingImage" src="images/pancakeSyrup.webp" alt="Pancake syrup topping Image" />
-        <img class="toppingImage"
+        <img class="toppingImage" id="syrupImage" src="images/pancakeSyrup.webp" alt="Pancake syrup topping Image" />
+        <img class="toppingImage" id="whippedCreamImage"
           src="images/pancakeWhipping.webp"
           alt="Pancake whipping cream Image"
         />
-        <img class="toppingImage" src="images/pancakeIcecream.webp" alt="Pancake icecream Image" />
+        <img class="toppingImage" id="iceCreamImage" src="images/pancakeIcecream.webp" alt="Pancake icecream Image" />
         <div class="price-banner">
           <p>€</p>
           <span class="totalPrice">5.00</span>
@@ -93,12 +93,12 @@
         </label>
         <h2>Order confirmation</h2>
         <div class="customization-section">
-          <p>Pancake type: <span id="pancakeTypeConfirm">abc</span></p>
+          <p>Pancake type: <span id="pancakeTypeConfirm">Classic</span></p>
           <p>
             Topping(s) and extra(s):
             <span id="toppingExtraConfirm">a, b, c</span>
             <h2>Delivery info</h2>
-            <p>Name: <input type="text" name="customerAddress" id="customerAddress"></p>
+            <p>Name: <input type="text" name="customerName" id="customerName"></p>
             <p>Address: <input type="text" name="customerAddress" id="customerAddress"></p>
             <p>Note: <input type="text" name="customerNote" id="customerNote"></p>
           </p>
@@ -107,6 +107,9 @@
           <h3>Total Price: €<span class="totalPrice">5.00</span></h3>
           <img class="button" id="orderButton" src="orderButton.svg" alt="Order Button" />
         </div>
+      </div>
+      <div class="thank-you-container">
+        <h2>Order confirmed! <br> Let’s get this pancake party flipping!</h2>
       </div>
     </div>
     <script src="script.js"></script>

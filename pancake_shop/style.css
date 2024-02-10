@@ -152,7 +152,8 @@ select,
   color: red;
 }
 
-.confirm-container {
+.confirm-container,
+.thank-you-container {
   flex: 1;
   padding: 20px;
   height: 60vh;

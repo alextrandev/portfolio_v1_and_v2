@@ -1,55 +1,76 @@
-let pancakeType = document.querySelector("#type"); //find the type
-let toppingExtra = document.querySelectorAll("input"); //find toppings list
-let defaultImage = document.querySelector(".imageDefault"); //find the pancake type images
-let toppingImage = document.querySelectorAll(".toppingImage"); //find the toppings images
+let toppingExtra = document.querySelectorAll('input[type = "checkbox"]');
+let toppingExtraConfirm = [];
+let pancakeTypeConfirm = "";
+let customerName = "";
+let customerAddress = "";
+let customerNote = "";
+let totalPrice = 5;
 
-function changePrice() {
-  switch (Number(pancakeType.value)) {
-    case 5:
+function changeOrder() {
+  let pancakeType = document.querySelector("#pancakeTypeConfirm");
+  let defaultImage = document.querySelector(".imageDefault");
+  let toppingImage = document.querySelectorAll(".toppingImage");
+  switch (document.querySelector("#type").value) {
+    case "5":
       defaultImage.src = "images/pancakeClassic.webp";
+      totalPrice = 5;
+      pancakeTypeConfirm = pancakeType.textContent = "Classic";
       break;
-    case 6:
+    case "6":
       defaultImage.src = "images/pancakeChocolate.webp";
+      totalPrice = 6;
+      pancakeTypeConfirm = pancakeType.textContent = "Chocolate";
       break;
-    case 7:
+    case "7":
       defaultImage.src = "images/pancakeBlueberry.webp";
+      totalPrice = 7;
+      pancakeTypeConfirm = pancakeType.textContent = "Blueberry";
       break;
-  } // change the preview image for the pancake type
-
-  let totalPrice = Number(pancakeType.value); //set total price = value of cake type
-
+  }
+  toppingExtraConfirm = [];
   for (let i = 0; i < toppingExtra.length; i++) {
     if (toppingExtra[i].checked) {
-      totalPrice += Number(toppingExtra[i].value); //increase the total price for each checked toppings
-      toppingImage[i + 1].style.visibility = "visible";
+      totalPrice += Number(toppingExtra[i].value);
+      toppingImage[i].style.visibility = "visible";
+      toppingExtraConfirm.push(toppingExtra[i].id);
     } else {
-      toppingImage[i + 1].style.visibility = "hidden";
-    } //show the toppings when checkbox checked
+      toppingImage[i].style.visibility = "hidden";
+    }
   }
-
-  let displayTotalPrice = document.querySelectorAll(".totalPrice"); //find the displayed price
-
-  for (let i = 0; i < displayTotalPrice.length; i++) {
-    displayTotalPrice[i].textContent = totalPrice.toFixed(2);
-  } // change all the displayed price
+  document
+    .querySelectorAll(".totalPrice")
+    .forEach((price) => (price.textContent = totalPrice.toFixed(2)));
 }
 
-//function and event listiner to hide the order card when click confirm
-function confirmOrder() {
+function confirmCake() {
   document.querySelector(".form-container").style.display = "none";
   document.querySelector(".confirm-container").style.display = "flex";
+  let toppingExtraDisplay = toppingExtraConfirm.map((item) => {
+    item = (item[0].toUpperCase() + item.slice(1)).split(/(?=[A-Z])/).join(" ");
+    return item;
+  });
+  let toppingExtra = document.querySelector("#toppingExtraConfirm");
+  toppingExtra.textContent = toppingExtraDisplay.join(", ");
+  toppingExtraConfirm == [] ? (toppingExtra.textContent = "None") : null;
 }
-document
-  .querySelector("#confirmButton")
-  .addEventListener("click", confirmOrder);
 
 function backToOrder() {
   document.querySelector(".confirm-container").style.display = "none";
   document.querySelector(".form-container").style.display = "flex";
 }
-document.querySelector("#backToOrder").addEventListener("click", backToOrder);
 
-pancakeType.addEventListener("change", changePrice); // event listener for type change
-toppingExtra.forEach(function (checkbox) {
-  checkbox.addEventListener("change", changePrice);
-}); // multiple event listeners for each check box change
+function confirmOrder() {
+  customerName = document.querySelector("#customerName").value;
+  customerAddress = document.querySelector("#customerAddress").value;
+  customerNote = document.querySelector("#customerNote").value;
+  document.querySelector(".confirm-container").style.display = "none";
+  document.querySelector(".thank-you-container").style.display = "flex";
+}
+
+document.querySelector("#confirmButton").addEventListener("click", confirmCake);
+document.querySelector("#backToOrder").addEventListener("click", backToOrder);
+document.querySelector("#type").addEventListener("change", changeOrder);
+toppingExtra.forEach((checkbox) =>
+  checkbox.addEventListener("change", changeOrder)
+);
+document.querySelector("#orderButton").addEventListener("click", confirmOrder);
