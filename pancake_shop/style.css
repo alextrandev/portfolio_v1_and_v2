@@ -61,11 +61,11 @@ select,
 .form-container {
   flex: 1;
   padding: 20px;
-  display: none;
+  /* display: none; */
   height: 60vh;
-  /* display: flex; */
-  /* flex-direction: column;
-  justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .price-banner {
@@ -116,8 +116,7 @@ select,
   padding: 2px;
 }
 
-.vCheck,
-.xCheck {
+.vCheck {
   position: relative;
   height: 100%;
   width: 100%;
@@ -125,9 +124,12 @@ select,
   display: none;
 }
 
+.checkBoxContainer:hover {
+    cursor: url("images/cursor.png"), pointer;
+}
+
 .checkBoxContainer:hover input ~ .checkBox {
   box-shadow: 0px 0px 5px red;
-  cursor: url("images/cursor.png"), pointer;
 }
 
 .checkBoxContainer input:checked ~ .checkBox {
@@ -138,7 +140,6 @@ select,
 
 .checkBoxContainer:hover input:checked ~ .checkBox {
   box-shadow: 0px 0px 5px green;
-  cursor: url("images/cursor.png"), pointer;
 }
 
 .checkBoxContainer input:checked ~ .checkBox .vCheck{
@@ -150,8 +151,8 @@ select,
   flex: 1;
   padding: 20px;
   height: 60vh;
-/* display: none; */
-  display: flex;
+  display: none;
+  /* display: flex; */
   flex-direction: column;
   justify-content: center;
 }
