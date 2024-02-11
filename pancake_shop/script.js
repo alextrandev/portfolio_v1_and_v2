@@ -6,6 +6,7 @@ let customerAddress = "";
 let customerNote = "";
 let totalPrice = 5;
 
+//to change the cake images and calculate price
 function changeOrder() {
   let pancakeType = document.querySelector("#pancakeTypeConfirm");
   let defaultImage = document.querySelector(".imageDefault");
@@ -27,7 +28,8 @@ function changeOrder() {
       pancakeTypeConfirm = pancakeType.textContent = "Blueberry";
       break;
   }
-  toppingExtraConfirm = [];
+  toppingExtraConfirm = []; //reset the toppings array
+  //can do foreach or for of here but "for" give index which reused for img
   for (let i = 0; i < toppingExtra.length; i++) {
     if (toppingExtra[i].checked) {
       totalPrice += Number(toppingExtra[i].value);
@@ -42,6 +44,7 @@ function changeOrder() {
     .forEach((price) => (price.textContent = totalPrice.toFixed(2)));
 }
 
+//move to the confirm tab on button click, display the selections
 function confirmCake() {
   document.querySelector(".form-container").style.display = "none";
   document.querySelector(".confirm-container").style.display = "flex";
@@ -54,11 +57,13 @@ function confirmCake() {
   toppingExtraConfirm == [] ? (toppingExtra.textContent = "None") : null;
 }
 
+//just to move back to cake customize
 function backToOrder() {
   document.querySelector(".confirm-container").style.display = "none";
   document.querySelector(".form-container").style.display = "flex";
 }
 
+//save the user info and display a thanks card
 function confirmOrder() {
   customerName = document.querySelector("#customerName").value;
   customerAddress = document.querySelector("#customerAddress").value;
@@ -67,6 +72,7 @@ function confirmOrder() {
   document.querySelector(".thank-you-container").style.display = "flex";
 }
 
+//add trigger to buttons, checkboxes, inputs
 document.querySelector("#confirmButton").addEventListener("click", confirmCake);
 document.querySelector("#backToOrder").addEventListener("click", backToOrder);
 document.querySelector("#type").addEventListener("change", changeOrder);

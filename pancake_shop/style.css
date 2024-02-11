@@ -7,6 +7,7 @@
   box-sizing: border-box;
 }
 
+/* universal */
 body {
   font-family: 'Playfair Display', serif;
   background-image: url(images/backGround.webp);
@@ -29,6 +30,14 @@ h2, h3 {
   font-family: 'Playfair Display', serif;
 }
 
+.button {
+  width: 10rem;
+}
+
+.button:hover {
+  cursor: url("images/cursor.png"), pointer;
+}
+
 .customization-section,
 select,
 .confirm-container {
@@ -44,6 +53,7 @@ select,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* cake display section */
 .image-container {
   position: relative;
   flex: 1;
@@ -58,10 +68,11 @@ select,
   visibility: hidden;
 }
 
+
+/* cake customize section */
 .form-container {
   flex: 1;
   padding: 20px;
-  /* display: none; */
   height: 60vh;
   display: flex;
   flex-direction: column;
@@ -85,16 +96,7 @@ select,
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.button {
-  width: 10rem;
-}
-
-.button:hover {
-  cursor: url("images/cursor.png"), pointer;
-}
-
-
-/* Checkbox customizing */
+/* checkboxes styling */
 .checkBoxContainer {
   cursor: pointer;
   display: flex;
@@ -136,7 +138,6 @@ select,
   border: 1px solid green;
   background: rgba(0, 128, 0, 0.55);
 }
-
 
 .checkBoxContainer:hover input:checked ~ .checkBox {
   box-shadow: 0px 0px 5px green;
