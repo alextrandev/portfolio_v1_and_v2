@@ -115,9 +115,12 @@ async function fetchCountryOnClick(countryCode) {
     selectedCountry.languages
   ).join(", ");
   document.querySelector("#subregion").textContent = selectedCountry.subregion;
-  document.querySelector("#currency").textContent = Object.values(
-    selectedCountry.currencies
-  ).join(" ");
+  let currencyString = "";
+  const currencyObj = selectedCountry.currencies;
+  for (code of Object.keys(currencyObj)) {
+    currencyString += `${currencyObj[code].name} (${code} | ${currencyObj[code].symbol}) `;
+  }
+  document.querySelector("#currency").textContent = currencyString;
   document.querySelector("#countryContainer").style.display = null;
   document.querySelector("#countryContainer").scrollIntoView();
 }
