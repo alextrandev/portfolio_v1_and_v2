@@ -1,24 +1,44 @@
 //function to load all the countries as a List element
 async function fetchAsync() {
-  let response = await fetch(
-    "https://restcountries.com/v3.1/all?fields=name,flags,cca3"
+  const response = await fetch(
+    "https://restcountries.com/v3.1/all?fields=name,flags,cca3,region"
   );
-  let data = await response.json();
-  data.forEach((country) => {
-    let li = document.createElement("li");
-    li.className = "gridItem";
-    let div = document.createElement("div");
-    div.className = "flagContainer";
-    div.addEventListener("click", () => fetchAsyncOnClick(country.cca3));
-    let img = document.createElement("img");
-    img.src = country.flags.svg;
-    div.appendChild(img);
-    let h3 = document.createElement("h3");
-    h3.textContent = country.name.common;
-    div.appendChild(h3);
-    li.appendChild(div);
-    document.querySelector(".gridContainer").appendChild(li);
-  });
+  const data = await response.json();
+  const regions = new Set(data.map((country) => country.region));
+  for (region of regions) {
+    const section = document.createElement("section");
+    section.className = "regionSection";
+    section.id = region;
+    const h2 = document.createElement("h2");
+    h2.textContent = region;
+    section.appendChild(h2);
+    const ul = document.createElement("ul");
+    ul.className = "gridContainer";
+    section.appendChild(ul);
+    document.querySelector("#regionsMain").appendChild(section);
+    const sortedData = data
+      .filter((country) => country.region == region)
+      .sort((a, b) => {
+        if (a.name.common > b.name.common) return 1;
+        else if (a.name.common < b.name.common) return -1;
+        else return 0;
+      });
+    sortedData.forEach((country) => {
+      let li = document.createElement("li");
+      li.className = "gridItem";
+      let div = document.createElement("div");
+      div.className = "flagContainer";
+      div.addEventListener("click", () => fetchAsyncOnClick(country.cca3));
+      let img = document.createElement("img");
+      img.src = country.flags.svg;
+      div.appendChild(img);
+      let h3 = document.createElement("h3");
+      h3.textContent = country.name.common;
+      div.appendChild(h3);
+      li.appendChild(div);
+      ul.appendChild(li);
+    });
+  }
 }
 fetchAsync(); //run the function of page load
 
