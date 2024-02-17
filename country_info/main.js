@@ -1,4 +1,3 @@
-//function to load all the countries as a List element
 async function fetchAsync() {
   const response = await fetch(
     "https://restcountries.com/v3.1/all?fields=name,flags,cca3,region"
@@ -38,6 +37,15 @@ async function fetchAsync() {
       li.appendChild(div);
       ul.appendChild(li);
     });
+    const regionH2 = document.createElement("h2");
+    regionH2.className = "region_select_button";
+    regionH2.id = `${region}Section`;
+    regionH2.textContent = region;
+    const regionSelect = document.querySelector(".region_select");
+    regionH2.addEventListener("click", () =>
+      changeRegion(regionH2.textContent)
+    );
+    regionSelect.appendChild(regionH2);
   }
 }
 fetchAsync(); //run the function of page load
@@ -75,6 +83,13 @@ async function fetchAsyncOnClick(countryCode) {
   ).join(" ");
   document.querySelector("#countryContainer").style.display = null;
   document.querySelector("#countryContainer").scrollIntoView();
+}
+
+function changeRegion(region) {
+  const regionSection = document.querySelectorAll(".regionSection");
+  regionSection.forEach((section) => (section.style.display = "none"));
+  const thisRegion = document.querySelector(`#${region}`);
+  thisRegion.style.display = "block";
 }
 
 //need to work on click disapearing, multiple name ID, map, currencies(maybe use foreach), info not available condition. commenting on codes. animation, hover, sorting, region tabs, closing or back button on countryContainer.
