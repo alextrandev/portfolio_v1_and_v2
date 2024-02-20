@@ -125,7 +125,10 @@ async function fetchCountryOnClick(countryCode) {
   document.querySelector("#countryContainer").scrollIntoView();
 }
 
+const closeCountryContainer = () =>
+  (document.querySelector("#countryContainer").style.display = "none");
+
 fetchAllCountry(); //load the all countries section on page load
 fetchCountriesByRegion(); //load the region section on page load
 
-//need to work on click disapearing, multiple name ID, map, currencies(maybe use foreach), info not available condition. commenting on codes. animation, hover, sorting, region tabs, closing or back button on countryContainer.
+//need to work on click disapearing, multiple name ID, map, info not available condition. commenting on codes. animation, hover, closing or back button on countryContainer.

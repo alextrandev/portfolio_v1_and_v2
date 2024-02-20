@@ -124,6 +124,23 @@ li img {
     align-items: center;
 }
 
+.closeButton {
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    background: transparent;
+    left: 88%;
+    border: transparent;
+}
+
+.closeButton:hover {
+    filter: drop-shadow(0px 0px 5px #D8315B);
+}
+
+.material-symbols-outlined {
+    font-size: 5rem !important;
+}
+
 .flagAndCoaContainer {
     display: grid;
     grid-template-columns: 2fr 1fr;
