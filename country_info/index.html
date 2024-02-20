@@ -11,20 +11,24 @@
     <title>Countries Info</title>
   </head>
   <body>
+    <!-- header with a big logo -->
     <header>
       <div>
         <img src="assets/logo.svg" alt="Country info website logo" />
       </div>
     </header>
+    <!-- placeholder country infos container. will load when a country card is selected -->
     <main id="countryContainer" style="display: none">
-      <button class="closeButton" onclick="closeCountryContainer()">
+      <!-- button to hide the container -->
+      <button class="closeButton" onclick="closeContainer()">
         <span class="material-symbols-outlined"> close_small </span>
       </button>
+      <!-- hero section with name, official names, flags and coat of arms-->
       <section class="bannerSection">
         <h1 style="display: flex; align-items: center">
           <img src="assets/textDecorationArrow.svg" alt="Decoration" />
           <div class="bannerNameContainer">
-            <span id="countryName"></span>
+            <span class="countryName"></span>
             <div>
               <span>Official name: </span>
               <span id="officialName"></span>
@@ -40,13 +44,14 @@
           <img id="flag" />
           <img id="coa" alt="Country coat of arms" />
           <p id="flagAlt"></p>
-          <p><span id="countryNameCoa"></span> Coat of Arms</p>
+          <p><span class="countryName"></span> Coat of Arms</p>
         </div>
         <img src="assets/lineDecoration.svg" style="width: 60%; margin: 3rem" />
       </section>
+      <!-- info section with all the infos pull from rest countries -->
       <section class="infoSection">
         <div class="infoContainer">
-          <h2>Fact about <span id="countryNameFact"></span></h2>
+          <h2>Fact about <span class="countryName"></span></h2>
           <ul class="infoList">
             <li class="title">CCA3 code:</li>
             <li class="value" id="cca3"></li>
@@ -63,7 +68,7 @@
             <li class="title">Subregion:</li>
             <li class="value" id="subregion"></li>
             <li class="title">Currency:</li>
-            <li class="value" id="currency">Euro €</li>
+            <li class="value" id="currency"></li>
           </ul>
         </div>
         <img
@@ -71,9 +76,10 @@
           style="width: 60%; margin: 3rem; align-self: center"
         />
       </section>
+      <!-- map section hidden because it not working yet -->
       <section class="mapSection" style="display: none">
         <div class="mapContainer">
-          <h2>Map of <span id="countryNameMap">Andorra</span></h2>
+          <h2>Map of <span class="countryName"></span></h2>
           <iframe
             width="100%"
             height="100%"
@@ -88,10 +94,12 @@
         </div>
       </section>
     </main>
+    <!-- country selection with many country cards sorted into regions -->
     <main id="regionsMain">
       <div class="region_select"></div>
-      <!-- contents from main.js -->
+      <!-- contents will be add from main.js -->
     </main>
+    <!-- footer -->
     <footer style="display: flex; justify-content: center">
       <p>
         Countries Info by Alex Tran. Countries databases by REST Country
