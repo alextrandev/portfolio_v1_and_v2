@@ -5,19 +5,18 @@ const sortAlphabet = (data) =>
     else return 0;
   });
 
+const id = (name) => document.querySelector(`#${name}`);
+
 function createRegionSection(region) {
   const section = document.createElement("section");
   section.className = "regionSection";
   section.id = region;
-  const h2 = document.createElement("h2");
-  h2.textContent = region;
-  section.appendChild(h2);
   const ul = document.createElement("ul");
   ul.className = "gridContainer";
   ul.id = `regionList${region}`;
   section.appendChild(ul);
   section.style.display = "none";
-  document.querySelector("#regionsMain").appendChild(section);
+  id("regionsMain").appendChild(section);
 }
 
 function createCountryCard(country, region) {
@@ -51,6 +50,10 @@ function changeRegion(region) {
   regionSection.forEach((section) => (section.style.display = "none"));
   const thisRegion = document.querySelector(`#${region}`);
   thisRegion.style.display = "block";
+  const allRegionButton = document.querySelectorAll(".region_select_button");
+  allRegionButton.forEach((button) => button.style.removeProperty("filter"));
+  const thisRegionButton = document.querySelector(`#${region}Section`);
+  thisRegionButton.style.filter = "drop-shadow(0px 0px 2px #3E92CC)";
 }
 
 async function fetchAllCountry() {
@@ -91,32 +94,31 @@ async function fetchCountryOnClick(countryCode) {
     "https://restcountries.com/v3.1/all?fields=name,cca3,currencies,capital,region,subregion,languages,area,maps,population,flags,coatOfArms"
   );
   let data = await response.json();
-  let selectedCountry = data.find((country) => country.cca3 === countryCode);
-  // console.log(selectedCountry);
+  let country = data.find((country) => country.cca3 === countryCode);
+  // console.log(country);
   document.querySelector("#countryName").textContent =
     document.querySelector("#countryNameCoa").textContent =
     document.querySelector("#countryNameFact").textContent =
     document.querySelector("#countryNameMap").textContent =
-      selectedCountry.name.common;
-  document.querySelector("#officialName").textContent =
-    selectedCountry.name.official;
+      country.name.common;
+  document.querySelector("#officialName").textContent = country.name.official;
   document.querySelector("#flagAlt").textContent = document.querySelector(
     "#flag"
-  ).alt = selectedCountry.flags.alt;
-  document.querySelector("#flag").src = selectedCountry.flags.svg;
-  document.querySelector("#coa").src = selectedCountry.coatOfArms.svg;
-  document.querySelector("#cca3").textContent = selectedCountry.cca3;
-  document.querySelector("#area").textContent = selectedCountry.area;
-  document.querySelector("#capital").textContent = selectedCountry.capital;
-  document.querySelector("#population").textContent =
-    selectedCountry.population;
-  document.querySelector("#region").textContent = selectedCountry.region;
+  ).alt = country.flags.alt;
+  // document.querySelector("#flag").src = country.flags.svg;
+  id("flag").src = country.flags.svg;
+  document.querySelector("#coa").src = country.coatOfArms.svg;
+  document.querySelector("#cca3").textContent = country.cca3;
+  document.querySelector("#area").textContent = country.area;
+  document.querySelector("#capital").textContent = country.capital;
+  document.querySelector("#population").textContent = country.population;
+  document.querySelector("#region").textContent = country.region;
   document.querySelector("#language").textContent = Object.values(
-    selectedCountry.languages
+    country.languages
   ).join(", ");
-  document.querySelector("#subregion").textContent = selectedCountry.subregion;
+  document.querySelector("#subregion").textContent = country.subregion;
   let currencyString = "";
-  const currencyObj = selectedCountry.currencies;
+  const currencyObj = country.currencies;
   for (code of Object.keys(currencyObj)) {
     currencyString += `${currencyObj[code].name} (${code} | ${currencyObj[code].symbol}) `;
   }
@@ -131,4 +133,4 @@ const closeCountryContainer = () =>
 fetchAllCountry(); //load the all countries section on page load
 fetchCountriesByRegion(); //load the region section on page load
 
-//need to work on click disapearing, multiple name ID, map, info not available condition. commenting on codes. animation, hover, closing or back button on countryContainer.
+//map, info not available condition. commenting on codes. animation, hover, closing or back button on countryContainer.
