@@ -1,0 +1,98 @@
+/* universal and section container */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: cornflowerblue;
+    padding: 3rem;
+}
+
+main {
+    background-color: white;
+    border-radius: 0.5rem;
+    display: flex;
+    margin-bottom: 3rem;
+}
+
+.add_car,
+.car_database {
+    display: flex;
+    flex: 1;
+    padding: 2rem;
+}
+
+.car_form {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+/* add car form section */
+#error_msg {
+    color: red;
+    font-size: 0.8rem;
+}
+
+.car_database {
+    flex: 3;
+    flex-direction: column;
+}
+
+.car_form label {
+    margin-top: 1rem;
+}
+
+#submit {
+    margin-top: 2rem;
+    width: 10rem;
+    padding: 0.1rem;
+}
+
+/* database section */
+.car_database_header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.search_bar {
+    display: flex;
+    align-items: center
+}
+
+.search_bar input,
+.search_bar select {
+    margin-left: 0.2rem;
+}
+
+/* database section table */
+.car_table {
+    table-layout: fixed;
+    width: 100%;
+}
+
+.car_table td,
+.car_table th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    overflow: hidden;
+}
+
+.car_table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.car_table tr:hover {
+    background-color: #ddd;
+}
+
+.car_table th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #04AA6D;
+    color: white;
+}
