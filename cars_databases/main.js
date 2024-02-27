@@ -11,25 +11,25 @@ function Car(plate, maker, model, owner, price, color) {
   this.color = color;
 }
 
-const addRow = (arr, location, index) => {
+const addRow = (array, location, index) => {
   const row = location.insertRow(index);
-  for (value of arr) {
+  for (element of array) {
     const cell = row.insertCell(-1);
-    cell.textContent = value;
+    cell.textContent = element;
   }
 };
 
 function addNewCar(event) {
   event.preventDefault(); //stop the page from reloading
-  //try catch here to stop the function and inject a message if field is not fill when sumbit
   try {
-    document.querySelector("#error_msg").textContent = "";
     const inputs = document.querySelectorAll(".car_form > input");
     let inputValues = [];
+    document.querySelector("#error_msg").textContent = "";
+
     for (input of inputs) {
       inputValues.push(input.value);
       if (input.value == "") throw new Error("Please fill all fields!");
-    }
+    } //IF statement break the function if a field is unfilled.
     cars.push(new Car(...inputValues));
     addRow(inputValues, table, 0);
   } catch (error) {
@@ -41,15 +41,13 @@ function addNewCar(event) {
 function searchCar() {
   const searchTable = document.querySelector("#car_table_search");
   const type = document.querySelector("#search_type").value;
-  const term = search.value.toLowerCase();
-  const result = cars.filter((car) => car[type].toLowerCase().includes(term));
-  if (term == "") {
-    searchTable.style.display = "none";
-    table.style.display = "";
-  } else {
-    table.style.display = "none";
-    searchTable.style.display = "";
-  }
+  const term = search.value.toString().toLowerCase();
+  const result = cars.filter((car) => car[type].toString().toLowerCase().includes(term));
+
+  term == "" //when there is input in searchbar, hide the database table
+    ? (searchTable.style.display = "none") && (table.style.display = "")
+    : (table.style.display = "none") && (searchTable.style.display = "");
+
   searchTable.innerHTML = ""; //delete the whole table before display new one
   result.forEach((car) => addRow(Object.values(car), searchTable, -1));
   if (result.length == 0) addRow(["Not found"], searchTable, -1);

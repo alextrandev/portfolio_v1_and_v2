@@ -24,6 +24,14 @@
         "color": "Black"
     },
     {
+        "plate": "FOX4EV",
+        "maker": "Tesla",
+        "model": "Model 3",
+        "owner": "Margit Tennosaar",
+        "price": 50000,
+        "color": "Red"
+    },
+    {
         "plate": "JKL012",
         "maker": "Chevrolet",
         "model": "Silverado",
@@ -110,14 +118,6 @@
         "owner": "Rachel Miller",
         "price": 58000,
         "color": "Blue"
-    },
-    {
-        "plate": "QRS345",
-        "maker": "Tesla",
-        "model": "Model 3",
-        "owner": "Michael Davis",
-        "price": 50000,
-        "color": "Red"
     },
     {
         "plate": "TUV123",
