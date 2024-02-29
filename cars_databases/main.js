@@ -53,7 +53,7 @@ function searchCar() {
   if (result.length == 0) addRow(["Not found"], searchTable, -1);
 }
 
-fetch("cars.json")
+fetch("assets/cars.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((car) => addRow(Object.values(car), table, -1));
