@@ -1,3 +1,4 @@
+"use strict";
 let cars = [];
 const table = document.querySelector("#car_table");
 const search = document.querySelector("#search");
@@ -13,7 +14,7 @@ function Car(plate, maker, model, owner, price, color) {
 
 const addRow = (array, location, index) => {
   const row = location.insertRow(index);
-  for (element of array) {
+  for (const element of array) {
     const cell = row.insertCell(-1);
     cell.textContent = element;
   }
@@ -26,7 +27,7 @@ function addNewCar(event) {
     let inputValues = [];
     document.querySelector("#error_msg").textContent = "";
 
-    for (input of inputs) {
+    for (const input of inputs) {
       inputValues.push(input.value);
       if (input.value == "") throw new Error("Please fill all fields!");
     } //IF statement break the function if a field is unfilled.
@@ -35,7 +36,7 @@ function addNewCar(event) {
   } catch (error) {
     document.querySelector("#error_msg").textContent = error.message;
   }
-  event.target.reset(); //reset the form after submit
+  // event.target.reset(); //reset input fields
 }
 
 function searchCar() {

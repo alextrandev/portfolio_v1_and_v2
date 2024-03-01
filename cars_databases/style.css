@@ -95,9 +95,10 @@ img {
     margin-top: 1rem;
 }
 
-#submit {
-    margin-top: 2rem;
-    width: 10rem;
+#submit,
+#reset {
+    margin-top: 1.5rem;
+    width: 7rem;
     padding: 0.1rem;
 }
 
@@ -157,6 +158,5 @@ img {
 
 img {
     display: none;
-    width: 30%;
 }
 }

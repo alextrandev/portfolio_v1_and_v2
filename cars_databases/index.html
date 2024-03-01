@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="shortcut icon" href="assets/car_icon.ico" type="assets/car_icon.ico" />
     <title>Cars Database</title>
   </head>
   <body>
     <nav>
-      <!-- <img src="assets/car_picture_small.webp" alt="Car image decoration" /> -->
       <h1>CARS DATABASE</h1>
     </nav>
     <main>
@@ -28,7 +28,10 @@
           <input type="number" id="price" name="price" />
           <label for="color">Color: </label>
           <input type="text" id="color" name="color" />
-          <button id="submit">Submit</button>
+          <div>
+            <button type="submit" id="submit">Submit</button>
+            <button type="reset" id="reset">Reset</button>
+          </div>
           <!-- error message content injected from JS if any field is not fill when submit -->
           <p id="error_msg"></p>
         </form>
@@ -75,6 +78,7 @@
     <footer>
       <div></div>
     </footer>
+    <!-- copyright &copy; Alex Tran -->
   </body>
   <script src="main.js"></script>
 </html>
