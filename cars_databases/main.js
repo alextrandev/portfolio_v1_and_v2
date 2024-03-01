@@ -33,10 +33,11 @@ function addNewCar(event) {
     } //IF statement break the function if a field is unfilled.
     cars.push(new Car(...inputValues));
     addRow(inputValues, table, 0);
+    // event.target.reset(); //reset input fields
+    // document.querySelector(".car_form").reset();
   } catch (error) {
     document.querySelector("#error_msg").textContent = error.message;
   }
-  // event.target.reset(); //reset input fields
 }
 
 function searchCar() {
