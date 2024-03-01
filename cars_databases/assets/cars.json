@@ -1,5 +1,13 @@
 [
     {
+        "plate": "GHOST",
+        "maker": "Porche",
+        "model": "911 GT3",
+        "owner": "Alex Tran",
+        "price": 180000,
+        "color": "Blue"
+    },
+    {
         "plate": "ABC123",
         "maker": "Toyota",
         "model": "Camry",
@@ -8,12 +16,12 @@
         "color": "Red"
     },
     {
-        "plate": "DEF456",
-        "maker": "Honda",
-        "model": "Civic",
-        "owner": "Jane Smith",
-        "price": 22000,
-        "color": "Blue"
+        "plate": "FOX4EV",
+        "maker": "Tesla",
+        "model": "Model 3",
+        "owner": "Margit Tennosaar",
+        "price": 50000,
+        "color": "Red"
     },
     {
         "plate": "GHI789",
@@ -22,14 +30,6 @@
         "owner": "Mike Johnson",
         "price": 35000,
         "color": "Black"
-    },
-    {
-        "plate": "FOX4EV",
-        "maker": "Tesla",
-        "model": "Model 3",
-        "owner": "Margit Tennosaar",
-        "price": 50000,
-        "color": "Red"
     },
     {
         "plate": "JKL012",
