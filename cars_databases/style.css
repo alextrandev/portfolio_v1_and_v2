@@ -3,15 +3,16 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    overscroll-behavior: none;
 }
 
 @keyframes animatedBackground {
     from {
-        background-position: -4.4% bottom;
+        background-position: -23% bottom;
     }
 
     to {
-        background-position: 104.4% bottom;
+        background-position: 123% bottom;
     }
 }
 
@@ -41,8 +42,8 @@ footer {
 }
 
 footer div {
-    background-image: url(assets/car_picture_small.webp);
-    background-size: 4rem;
+    background-image: url(assets/car_picture_small.png);
+    background-size: 17rem;
     background-repeat: no-repeat;
     padding: 1rem;
     animation: animatedBackground 13s ease-in-out infinite;
