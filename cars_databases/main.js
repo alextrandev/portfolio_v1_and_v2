@@ -31,10 +31,10 @@ function addNewCar(event) {
       inputValues.push(input.value);
       if (input.value == "") throw new Error("Please fill all fields!");
     } //IF statement break the function if a field is unfilled.
+
     cars.push(new Car(...inputValues));
     addRow(inputValues, table, 0);
-    // event.target.reset(); //reset input fields
-    // document.querySelector(".car_form").reset();
+    event.target.reset(); //reset input fields
   } catch (error) {
     document.querySelector("#error_msg").textContent = error.message;
   }
