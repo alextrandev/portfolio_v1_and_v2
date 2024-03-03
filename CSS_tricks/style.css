@@ -1,0 +1,79 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overscroll-behavior: none;
+    /* disable the bouncy scroll for mac */
+}
+
+html {
+    font-size: 14px;
+    /* change this to overwrite all rem values. good for mobile */
+    scroll-behavior: smooth;
+    /* stop the jump animation of scroll */
+}
+
+body {
+    background-color: lavenderblush;
+    font-family: Impact, sans-serif;
+    /* always change font when start a new html */
+    color: white;
+}
+
+header,
+section,
+footer {
+    padding: 1rem;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    position: sticky;
+    top: 0;
+}
+
+nav ul li {
+    display: inline-block;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+section {
+    min-height: 75vh;
+}
+
+section:first-child,
+header {
+    background-color: #b2d5fb;
+}
+
+section:nth-child(2) {
+    background-color: #aeffae;
+}
+
+footer {
+    background-color: black;
+}
+
+button {
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    padding: 0.5rem 1rem;
+    background-color: #f68c66;
+    font-family: inherit;
+    font-size: inherit;
+    /* default overwrite for all button */
+}
+
+#back_to_top_button {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
