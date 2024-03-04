@@ -90,6 +90,40 @@ button {
     background-color: transparent;
 }
 
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.overlay.visible {
+    display: flex;
+}
+
+.modal {
+    background-color: white;
+    color: black;
+    min-height: 50vh;
+    width: 75vw;
+    padding: 2rem;
+    border-radius: 5px;
+    position: relative;
+}
+
+.modal button {
+    position: absolute;
+    top: 1.5rem;
+    right: 1rem;
+    background-color: transparent;
+}
+
 @media (max-width: 800px) {
     nav ul {
         display: none;

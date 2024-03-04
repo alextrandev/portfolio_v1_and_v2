@@ -3,12 +3,7 @@ const header = document.querySelector("header");
 const menuBurgerButton = document.querySelector(".mobile");
 const navList = document.querySelector("nav ul");
 const navLink = document.querySelectorAll("nav ul li a");
-
-backToTopButton.addEventListener("click", () => {
-  document.body.scrollTop = 0; // for safari
-  document.documentElement.scrollTop = 0; // chrome, FF and others
-  header.classList.toggle("bg");
-});
+const overlay = document.querySelector(".overlay");
 
 window.onscroll = function () {
   document.body.scrollTop > 200 || document.documentElement.scrollTop > 200 ? (backToTopButton.style.display = "block") : (backToTopButton.style.display = "none");
@@ -17,7 +12,16 @@ window.onscroll = function () {
   // if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) header.style.backgroundColor = "white";
 };
 
+backToTopButton.addEventListener("click", () => {
+  document.body.scrollTop = 0; // for safari
+  document.documentElement.scrollTop = 0; // chrome, FF and others
+  header.classList.toggle("bg");
+});
+
 menuBurgerButton.addEventListener("click", () => navList.classList.toggle("responsive"));
 
-// navLink.forEach((link) => link.addEventListener("click", () => navList.classList.remove("responsive")));
-navLink.forEach((link) => link.addEventListener("click", () => navList.classList.toggle("responsive")));
+navLink.forEach((link) => link.addEventListener("click", () => navList.classList.remove("responsive")));
+
+document.querySelector(".modal_button").addEventListener("click", () => overlay.classList.add("visible"));
+
+document.querySelector(".modal button").addEventListener("click", () => overlay.classList.remove("visible"));
