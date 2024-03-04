@@ -84,3 +84,43 @@ button {
     font-size: 1rem;
     color: grey;
 }
+
+.mobile {
+    display: none;
+    background-color: transparent;
+}
+
+.responsive {
+
+}
+
+@media (max-width: 800px) {
+    nav ul {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
+
+    ul.responsive {
+       display: flex;
+       flex-direction: column;
+       align-items: end;
+       background-color: white;
+       color: #333;   
+       position: absolute;
+       right: 0;
+       width: 100%;
+       padding-right: 1rem;
+    }
+
+    ul.responsive li {
+        display: block;
+        margin: 1rem;
+    }
+
+    header {
+        background-color: white;
+        color: #333;
+    }
+}

@@ -1,5 +1,8 @@
 const backToTopButton = document.querySelector("#back_to_top_button");
 const header = document.querySelector("header");
+const menuBurgerButton = document.querySelector(".mobile");
+const navList = document.querySelector("nav ul");
+const navLink = document.querySelectorAll("nav ul li a");
 
 backToTopButton.addEventListener("click", () => {
   document.body.scrollTop = 0; // for safari
@@ -12,16 +15,9 @@ window.onscroll = function () {
   // if (document.body.scrollTop > 1 || document.documentElement.scrollTop > 1) header.style.backgroundColor = "#b2d5fb";
   // if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) header.style.backgroundColor = "#aeffae";
   // if (document.body.scrollTop == 0 || document.documentElement.scrollTop == 0) header.style.backgroundColor = "white";
-
-  // switch (document.body.scrollTop || document.documentElement.scrollTop) {
-  //   case 0:
-  //     header.style.backgroundColor = "white";
-  //     break;
-  //   case >1:
-  //     header.style.backgroundColor = "#b2d5fb";
-  //     break;
-  //   case 200:
-  //     header.style.backgroundColor = "aeffae";
-  //     break;
-  // }
 };
+
+menuBurgerButton.addEventListener("click", () => navList.classList.toggle("responsive"));
+
+// navLink.forEach((link) => link.addEventListener("click", () => navList.classList.remove("responsive")));
+navLink.forEach((link) => link.addEventListener("click", () => navList.classList.toggle("responsive")));
