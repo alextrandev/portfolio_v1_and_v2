@@ -11,7 +11,7 @@
     <!-- Main heading: Logo, name, link to section, email + send email button -->
     <header>
       <container>
-        <img src="images/logo_alex.svg" style="width: 40px; margin-top: 4px" />
+        <img src="images/logo_alex.svg" />
         <div>
           <strong style="color: #edafb8">Alex Tran</strong>
           <p>porfolio</p>
@@ -19,10 +19,10 @@
       </container>
       <nav>
         <ul>
-          <li><a href="#">Skills</a></li>
-          <li><a href="#">About me</a></li>
-          <li><a href="#">Resume</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#about_me">About me</a></li>
+          <li><a href="#resume">Resume</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li><a href="#">Contact</a></li>
         </ul>
       </nav>
@@ -30,31 +30,37 @@
 
     <main>
       <!--hero section with welsome message, paragrahs and a profile picture-->
-      <section>
+      <section id="hero">
         <container>
           <p style="font-size: 18px">Hello world! I am Alex Tran</p>
-          <h1>I am a Web designer and a Full-stack Web Developer</h1>
-          <button>
+          <h1>
+            I am a Web designer<br />
+            and a Full-stack<br />
+            Web Developer
+          </h1>
+          <button class="contact_button">
             <img src="images/icon_click.png" alt="Contact button" />
             <span>Get in touch</span>
           </button>
         </container>
-        <img src="images/profile_picture_1.png" atl="Profile picture" />
+        <img class="hero_img" src="images/profile_picture_1.png" atl="Profile picture" />
       </section>
+      <!-- end of hero section -->
+
       <!--Skills section : Web design, Front end (HTML JS, ***), Back endPHP, SQL -->
-      <section>
-        <h2>What I do</h2>
+      <h2 class="skills_header">What I do?</h2>
+      <section id="skills">
         <container>
           <ul>
             <li class="skill_card">
               <div class="skill_card_header">
-                <h2>Front-end programming</h2>
+                <h4>Front-end programming</h4>
               </div>
               <div class="skill_card_main">
                 <p>
-                  Proficient languages: HTML, CSS, Javascript, Typescript.
+                  <strong>Proficient languages:</strong> HTML, CSS, Javascript, Typescript.
                   <br />
-                  Libraries and frameworks: React, Tailwind, Next.js.
+                  <strong>Libraries and frameworks:</strong> React, Tailwind, Next.js.
                 </p>
               </div>
               <div class="skill_card_icons">
@@ -69,42 +75,44 @@
             </li>
             <li class="skill_card">
               <div class="skill_card_header">
-                <h2>Back-end programming</h2>
+                <h4>Back-end programming</h4>
               </div>
               <div class="skill_card_main">
                 <p>
-                  Proficient languages: PHP, SQL.
+                  <strong>Proficient languages:</strong> PHP, SQL.
                   <br />
-                  Libraries and frameworks: Symfony, Drupal.
+                  <strong>Libraries and frameworks:</strong> Symfony, Drupal.
                 </p>
               </div>
               <div class="skill_card_icons">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original-wordmark.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original-wordmark.svg" />
+                <img style="background-color: white; border-radius: 50%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original.svg" />
               </div>
             </li>
             <li class="skill_card">
               <div class="skill_card_header">
-                <h2>Web design and project management</h2>
+                <h4>Web design and project management</h4>
               </div>
               <div class="skill_card_main">
                 <p>
-                  Development tools: Git, Trello.
+                  <strong>Development tools:</strong> Git, Trello.
                   <br />
-                  Web CMS: Webflow, Wordpress, etc.
+                  <strong>Web CMS:</strong> Webflow, Wordpress, etc.
                   <br />
-                  Web design tools: Figma, Sketch.
+                  <strong>Web design tools:</strong> Figma, Sketch.
                   <br />
-                  Graphic design: Illustrator, Photoshop, Lightroom.
+                  <strong>Graphic design:</strong> Illustrator, Photoshop, Lightroom.
                 </p>
               </div>
               <div class="skill_card_icons">
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webflow/webflow-original.svg" />
-                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" />
+
+                <img style="background-color: white" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webflow/webflow-original.svg" />
+
+                <img style="background-color: white; border-radius: 50%" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
                 <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg" />
               </div>
@@ -115,12 +123,12 @@
       <!--End of skill section-->
 
       <!--About me section-->
-      <section>
+      <section id="about_me">
         <img src="images/profile_picture_2.webp" atl="Picture of me" />
         <container>
           <h2>About me</h2>
           <p>I am a Full-stack web developer based in Helsinki, Finland with 2 years experiences in CMS development and front-end development. I am currently pursuing the Front-end developer - React, Drupal at Business College Helsinki. I am looking for an internship / traineeship / junior software developer position.</p>
-          <button>
+          <button class="contact_button">
             <img src="images/icon_click.png" alt="Contact button" />
             <span>Get in touch</span>
           </button>
@@ -129,7 +137,7 @@
       <!--End of about me section-->
 
       <!--Resume section-->
-      <section>
+      <section id="resume">
         <h2>My resume</h2>
         <container>
           <div class="resume_card">
