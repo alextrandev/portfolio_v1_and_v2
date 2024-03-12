@@ -4,261 +4,252 @@
     <meta charset="UTF-8" />
     <title>Alex's portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   </head>
 
   <body>
     <!-- Main heading: Logo, name, link to section, email + send email button -->
     <header>
+      <container>
+        <img src="images/logo_alex.svg" style="width: 40px; margin-top: 4px" />
+        <div>
+          <strong style="color: #edafb8">Alex Tran</strong>
+          <p>porfolio</p>
+        </div>
+      </container>
       <nav>
         <ul>
-          <img src="images/logo.png" style="width: 40px; margin-top: 4px" />
-          <li>
-            <strong style="color: #edafb8">Alex Tran</strong>
-            <br />porfolio
-          </li>
-          <li>Skills</li>
-          <li>About me</li>
-          <li>Resume</li>
-          <li>Projects</li>
-          <li>Contact</li>
+          <li><a href="#">Skills</a></li>
+          <li><a href="#">About me</a></li>
+          <li><a href="#">Resume</a></li>
+          <li><a href="#">Projects</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
       </nav>
     </header>
 
     <main>
       <!--hero section with welsome message, paragrahs and a profile picture-->
-      <section style="margin-top: 0px">
-        <table>
-          <tr>
-            <td>
-              <p style="font-size: 18px">Hello world! I am Alex Tran</p>
-              <h1>I am a Web designer and a Full-stack Web Developer</h1>
-              <button type="button">
-                <div style="font-family: 'Inconsolata'; font-weight: bold">
-                  <img
-                    style="width: 15px; margin-bottom: -4px"
-                    src="images/iconClickHere.png"
-                    alt="Click here button"
-                  />
-                  Get in touch
-                </div>
-              </button>
-            </td>
-            <td>
-              <img src="images/img1.png" atl="Profile picture" />
-            </td>
-          </tr>
-        </table>
+      <section>
+        <container>
+          <p style="font-size: 18px">Hello world! I am Alex Tran</p>
+          <h1>I am a Web designer and a Full-stack Web Developer</h1>
+          <button>
+            <img src="images/icon_click.png" alt="Contact button" />
+            <span>Get in touch</span>
+          </button>
+        </container>
+        <img src="images/profile_picture_1.png" atl="Profile picture" />
       </section>
-      <!--end of hero section-->
       <!--Skills section : Web design, Front end (HTML JS, ***), Back endPHP, SQL -->
       <section>
         <h2>What I do</h2>
-        <table>
-          <tr>
-            <td class="skillCard">
-              <div class="skillCardHeader">Web design</div>
-              <div class="skillCardParagraph">
+        <container>
+          <ul>
+            <li class="skill_card">
+              <div class="skill_card_header">
+                <h2>Front-end programming</h2>
+              </div>
+              <div class="skill_card_main">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Proficient languages: HTML, CSS, Javascript, Typescript.
                   <br />
-                  - Eveniet amet sequi dicta.
-                  <br />
-                  - Laudantium obcaecati alias
-                  <br />
-                  - voluptates nostrum cumque at totam!
+                  Libraries and frameworks: React, Tailwind, Next.js.
                 </p>
               </div>
-              <div class="skillCardIcons">abc</div>
-            </td>
-            <td class="skillCard">
-              <div>Front end developer</div>
-              <div>
+              <div class="skill_card_icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" />
+              </div>
+            </li>
+            <li class="skill_card">
+              <div class="skill_card_header">
+                <h2>Back-end programming</h2>
+              </div>
+              <div class="skill_card_main">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Proficient languages: PHP, SQL.
                   <br />
-                  - Eveniet amet sequi dicta.
-                  <br />
-                  - Laudantium obcaecati alias
-                  <br />
-                  - voluptates nostrum cumque at totam!
+                  Libraries and frameworks: Symfony, Drupal.
                 </p>
               </div>
-              <div>abc</div>
-            </td>
-            <td class="skillCard">
-              <div>Back end developer</div>
-              <div>
+              <div class="skill_card_icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/azuresqldatabase/azuresqldatabase-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/symfony/symfony-original-wordmark.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/drupal/drupal-original-wordmark.svg" />
+              </div>
+            </li>
+            <li class="skill_card">
+              <div class="skill_card_header">
+                <h2>Web design and project management</h2>
+              </div>
+              <div class="skill_card_main">
                 <p>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Development tools: Git, Trello.
                   <br />
-                  - Eveniet amet sequi dicta.
+                  Web CMS: Webflow, Wordpress, etc.
                   <br />
-                  - Laudantium obcaecati alias
+                  Web design tools: Figma, Sketch.
                   <br />
-                  - voluptates nostrum cumque at totam!
+                  Graphic design: Illustrator, Photoshop, Lightroom.
                 </p>
               </div>
-              <div>abc</div>
-            </td>
-          </tr>
-        </table>
+              <div class="skill_card_icons">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/trello/trello-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webflow/webflow-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/wordpress/wordpress-plain.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/sketch/sketch-original.svg" />
+              </div>
+            </li>
+          </ul>
+        </container>
       </section>
       <!--End of skill section-->
 
       <!--About me section-->
-      <section class="heroSection">
-        <table>
-          <tr>
-            <td>
-              <img
-                style="border-radius: 13px; margin-right: 50px; width: 40vh"
-                src="images/img2.webp"
-                atl="About me picture"
-              />
-            </td>
-            <td>
-              <h2>About me</h2>
-              <p style="font-size: 18px">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Perferendis, ratione. Accusantium sequi molestias, minus
-                voluptatibus officia nesciunt ab modi quas dolorum debitis!
-                Aspernatur distinctio quo ratione voluptatem fugiat impedit?
-                Sapiente vero repellat nobis facilis. Laborum ipsum nobis
-                aspernatur magnam tenetur?
-              </p>
-              <button type="button">
-                <div style="font-family: 'Inconsolata'; font-weight: bold">
-                  <img
-                    style="width: 15px; margin-bottom: -4px"
-                    src="images/iconClickHere.png"
-                    alt="Click here button"
-                  />
-                  Get in touch
-                </div>
-              </button>
-            </td>
-          </tr>
-        </table>
+      <section>
+        <img src="images/profile_picture_2.webp" atl="Picture of me" />
+        <container>
+          <h2>About me</h2>
+          <p>I am a Full-stack web developer based in Helsinki, Finland with 2 years experiences in CMS development and front-end development. I am currently pursuing the Front-end developer - React, Drupal at Business College Helsinki. I am looking for an internship / traineeship / junior software developer position.</p>
+          <button>
+            <img src="images/icon_click.png" alt="Contact button" />
+            <span>Get in touch</span>
+          </button>
+        </container>
       </section>
       <!--End of about me section-->
 
       <!--Resume section-->
       <section>
         <h2>My resume</h2>
-        <table class="cardTable">
-          <tr>
-            <td class="card">
-              <div style="display: inline-flex">
-                <img
-                  src="images/logoBc.png"
-                  style="width: 20px; height: 20px; margin-right: 10px"
-                />
-                <h4>Business College Helsinki</h4>
-              </div>
-              <div><h5>Full-stack web development training</h5></div>
-              <div class="dateTime">2024-present</div>
+        <container>
+          <div class="resume_card">
+            <div class="resume_header">
               <div>
-                <p>
-                  Lorem ipsum dolor sit amet adipisicing elit.
-                  <br />
-                  Lorem ipsum dolor sit amet adipisicing.
-                  <br />
-                  voluptates nostrum cumque at totam!
-                </p>
+                <div>
+                  <img src="images/logo_business_college.png" alt="Business College Helsinki logo" />
+                  <p>Business College Helsinki</p>
+                </div>
+                <p>01/24 - 12/24</p>
               </div>
-            </td>
-            <td class="card">
-              <div style="display: inline-flex">
-                <img
-                  src="images/logoCawash.svg"
-                  style="width: 20px; height: 20px; margin-right: 10px"
-                />
-                <h4>Carwash suomi</h4>
-              </div>
-              <div><h5>Digital marketing specialist</h5></div>
-              <div class="dateTime">2022-2023</div>
+              <h2>Full-stack Developer - React, Drupal</h2>
+            </div>
+            <div class="resume_main">
+              <p>
+                Front-end programming: HTML, CSS, Javascript, React.<br />
+                Back-end programming: PHP, SQL, Symfony, Drupal.<br />
+                Software development team: Git, Agile methods.
+              </p>
+            </div>
+          </div>
+          <div class="resume_card">
+            <div class="resume_header">
               <div>
-                <p>
-                  Lorem ipsum dolor sit amet adipisicing elit.
-                  <br />
-                  Lorem ipsum dolor sit amet adipisicing.
-                  <br />
-                  voluptates nostrum cumque at totam!
-                </p>
+                <div>
+                  <img src="images/logo_laurea.png" alt="Laurea UAS logo" />
+                  <p>Laurea UAS</p>
+                </div>
+                <p>2016 - 2021</p>
               </div>
-            </td>
-          </tr>
-          <tr>
-            <td class="card">
-              <div style="display: inline-flex">
-                <img
-                  src="images/logoLaurea.png"
-                  style="width: 20px; height: 20px; margin-right: 10px"
-                />
-                <h4>Laurea UAS</h4>
-              </div>
-              <div><h5>Business Information Technology (BBA)</h5></div>
-              <div class="dateTime">2016-2021</div>
+              <h2>BBA, Business information technology</h2>
+            </div>
+            <div class="resume_main">
+              <p>
+                Front-end programming: HTML, CSS, Typescript, Angular, Wordpress.<br />
+                Back-end and databases: PHP, mySQL.<br />
+                Web design and Digital Marketing.<br />
+                Management science.
+              </p>
+            </div>
+          </div>
+          <div class="resume_card">
+            <div class="resume_header">
               <div>
-                <p>
-                  Lorem ipsum dolor sit amet adipisicing elit.
-                  <br />
-                  Lorem ipsum dolor sit amet adipisicing.
-                  <br />
-                  voluptates nostrum cumque at totam!
-                </p>
+                <div>
+                  <img src="images/logo_cawash.svg" alt="Carwash Suomi logo" />
+                  <p>Carwash Suomi</p>
+                </div>
+                <p>2021 - 2022</p>
               </div>
-            </td>
-            <td class="card">
-              <div style="display: inline-flex">
-                <img
-                  src="images/logoWordpress.png"
-                  style="width: 20px; height: 20px; margin-right: 10px"
-                />
-                <h4>BKIT Vietnam</h4>
-              </div>
-              <div><h5>WordPress web developer</h5></div>
-              <div class="dateTime">2018</div>
+              <h2>Front-end developer</h2>
+            </div>
+            <div class="resume_main">
+              <p>
+                - WordPress and Webflow web developer.<br />
+                - IT and web projects manager.<br />
+                - Digitalization specialist.
+              </p>
+            </div>
+          </div>
+          <div class="resume_card">
+            <div class="resume_header">
               <div>
-                <p>
-                  Lorem ipsum dolor sit amet adipisicing elit.
-                  <br />
-                  Lorem ipsum dolor sit amet adipisicing.
-                  <br />
-                  voluptates nostrum cumque at totam!
-                </p>
+                <div>
+                  <img src="images/logo_wordpress.png" alt="WordPress placeholder logo" />
+                  <p>BKIT Vietnam</p>
+                </div>
+                <p>2019</p>
               </div>
-            </td>
-          </tr>
-        </table>
+              <h2>WordPress web developer</h2>
+            </div>
+            <div class="resume_main">
+              <p>- WordPress web projects assistant. - Maintain and update clients' WordPress sites.</p>
+            </div>
+          </div>
+        </container>
       </section>
       <!--End of resume section-->
 
       <!--Projects section-->
-
+      <section id="projects">
+        <h2>Take a look at my projects</h2>
+        <container>
+          <div>
+            <div class="project_preview_container">
+              <img src="" alt="" />
+            </div>
+            <h5>Projects</h5>
+            <p>Description</p>
+          </div>
+          <div>
+            <div class="project_preview_container">
+              <img src="" alt="" />
+            </div>
+            <h5>Projects</h5>
+            <p>Description</p>
+          </div>
+          <div>
+            <div class="project_preview_container">
+              <img src="" alt="" />
+            </div>
+            <h5>Projects</h5>
+            <p>Description</p>
+          </div>
+          <div>
+            <div class="project_preview_container">
+              <img src="" alt="" />
+            </div>
+            <h5>Projects</h5>
+            <p>Description</p>
+          </div>
+        </container>
+      </section>
       <!--End of projects section-->
     </main>
 
     <!--Footer: form-->
-    <section>
+    <footer>
       <h2>Contact me</h2>
-      <form>
-        <label for="firstname">Firstname</label>
-        <input type="text" name="firstname" id="firstname" />
-        <br />
-        <label for="lastname">Lastname</label>
-        <input type="text" name="lastname" id="lastname" />
-        <br />
-        <label for="email">E-mail</label>
-        <input type="text" name="email" id="email" />
-        <br />
-        <label for="message">Message</label>
-        <textarea rows="10" cols="30" value="Insert message here"></textarea>
-        <br />
-        <input type="submit" value="Send" />
-      </form>
-    </section>
+    </footer>
     <!--End of footer-->
   </body>
 </html>
