@@ -1,129 +1,7 @@
-body {
-    background-color: #DEDBD2;
-    font-family: 'Montserrat','Inconsolata';
-    font-size: 18px;
-    color: #212525;
-    margin-top: -18px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-header {
-    font-family: 'Montserrat';
-    display: flex;
-}
-
-nav {
-    display: flex;
-    width: 100%;
-}
-
-h4 {
-    padding: 0px;
-    margin: 0px;
-}
-
-h5 {
-    padding: 0px;
-    margin: 0px;
-}
-
-
-p {
-    font-family: 'Inconsolata';
-    font-size: 13px;
-}
-
-header {
-    background: #4A5759;
-    color: #F7E1D7;
-    height: 80px;
-    padding-top: 10px;
-    /*
-    this clip path code for slanted design is too buggy atm. will come back later.
-    clip-path: polygon(0 0, 100% 0, 100% 60px, 0 100%);
-    */
-}
-
-header ul {
-    justify-content: space-around;
-    display: flex;
-}
-
-header li {
-    display: inline-block;
-    padding-inline: 8px;
-}
-
-header td {
-    vertical-align: top;
-}
-
-section {
-    background: #B0C4B1;
-    margin-top: 150px;
-    margin-bottom: 150px;
-    padding-bottom: 50px;
-    padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 30px;
-    /*
-    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
-    */
-}
-
-button {
-    background-color: #212525;
-    color: #EDAFB8;
-    padding: 10px;
-    border: 0px;
-    border-radius: 5px;
-}
-
-img {
-    max-width: 50vh;
-}
-
-.skillCard {
-    background: black;
-    padding: 20px;
-}
-
-.skillCardHeader,
-.skillCardParagraph,
-.skillCardIcons {
-    background: #F7E1D7;
-    margin: -13px;
-    padding: 20px;
-}
-
-.skillCardHeader {
-    border-top-left-radius: 35px;
-    border-top-right-radius: 35px;
-    padding-top: 10px;
-    padding-bottom: 0;
-}
-
-.dateTime {
-    font-family: 'Inconsolata';
-    font-size: 13px;
-}
-
-.cardTable {
-    background-color: #4A5759;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 10px;
-} 
-
-.card {
-    background-color: #F7E1D7;
-    border-radius: 10px;
-    padding-top: 13px;
-    padding-left: 13px;
-    padding-right: 13px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 @font-face {
@@ -140,10 +18,24 @@ img {
     format('truetype');
 }
 
-/* Color code: 
-Primary: DEDBD2
-Secondary: B0C4B1
-Tetriary: 4A5759
-Text: 4A5759
-Highlight 1: EDAFB8
-Highlight 2: F7E1D7
+:root {
+    --primary-color: #B0C4B1;
+    --secondary-color: #4A5759;
+    --tetriary-color: #EDAFB8;
+    --light-color: #F7E1D7;
+    --dark-color: #212525;
+    --background-color: #DEDBD2;
+    --main-font: 'Montserrat', Helvetica, sans-serif;
+    --second-font: 'Inconsolata', Courier, monospace;
+    
+}
+
+body {
+    background-color: #DEDBD2;
+    font-family: var(--main-font);
+    font-size: 18px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
