@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     overscroll-behavior: none;
+    scroll-behavior: smooth;
 }
 
 @font-face {
@@ -187,3 +188,33 @@ section {
 }
 
 /* about me section */
+#about_me {
+    display: flex;
+    gap: 2rem;
+    border-radius: 0.2rem;
+    margin-bottom: 7rem;
+}
+
+.about_me_img {
+    width: 50%;
+    flex: 1;
+    border-radius: 2%;
+    box-shadow: 0 0 20px var(--secondary-color);
+    border: 5px dashed var(--secondary-color);
+}
+
+#about_me container {
+    flex: 1;
+    height: 100%;
+}
+
+#about_me p {
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+#about_me button {
+    margin: 1rem;
+}
+
+/* resume sections */
