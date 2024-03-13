@@ -64,7 +64,8 @@ body {
 }
 
 /* header */
-header {
+header,
+footer {
     background-color: var(--secondary-color);
     display: flex;
     justify-content: space-between;
@@ -73,12 +74,14 @@ header {
     color: var(--light-color);
 }
 
-header container {
+header container,
+footer container {
     display: flex;
     align-items: center;
 }
 
-header container img {
+header container img,
+footer container img {
     height: 4rem;
 }
 
@@ -99,6 +102,11 @@ main {
 
 section {
     background-color: var(--primary-color);
+    background: linear-gradient(
+        180deg,
+        var(--primary-color) 60%,
+        transparent
+    );
     display: flex;
     padding: 3rem;
     width: 100%;
@@ -109,7 +117,8 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 5rem;
-    margin-bottom: 5rem;
+    height: 100vh;
+    padding-bottom: 15rem;
     border-radius: 0 0 0.2rem 0.2rem;
 }
 
@@ -143,10 +152,10 @@ section {
 
 /* skills section */
 #skills {
-    margin-bottom: 11rem;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+    padding-top: 5rem;
     border-radius: 0.2rem;
+    height: 80vh;
+    scroll-margin-top: 7rem;
 }
 
 #skills ul {
@@ -187,43 +196,13 @@ section {
     width: 1.9rem;
 }
 
-/* about me section */
-#about_me {
-    display: flex;
-    gap: 2rem;
-    border-radius: 0.2rem;
-    margin-bottom: 7rem;
-}
-
-.about_me_img {
-    width: 50%;
-    flex: 1;
-    border-radius: 2%;
-    box-shadow: 0 0 20px var(--secondary-color);
-    border: 5px dashed var(--secondary-color);
-}
-
-#about_me container {
-    flex: 1;
-    height: 100%;
-}
-
-#about_me p {
-    padding: 1rem;
-    line-height: 1.6;
-}
-
-#about_me button {
-    margin: 1rem;
-}
-
 /* resume sections */
 #resume {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5rem;
-    background-color: transparent;
+    background: transparent;
 }
 
 #resume container {
@@ -276,9 +255,43 @@ section {
     z-index: -1;
 }
 
+/* about me section */
+#about_me {
+    display: flex;
+    gap: 2rem;
+    border-radius: 0.2rem;
+    padding-bottom: 10rem;
+}
+
+.about_me_img {
+    width: 50%;
+    flex: 1;
+    border-radius: 2%;
+    box-shadow: 0 0 20px var(--secondary-color);
+    border: 5px dashed var(--secondary-color);
+}
+
+#about_me container {
+    flex: 1;
+    height: 100%;
+}
+
+#about_me p {
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+#about_me button {
+    margin: 1rem;
+}
+
 /* projects section */
 #projects {
-    background-color: transparent;
+    background: linear-gradient(
+        180deg,
+        transparent 50%,
+        var(--primary-color)
+    )
 }
 
 #projects container {
@@ -289,10 +302,21 @@ section {
 }
 
 #projects img {
-    background-color: var(--primary-color);
+    width: 100%;
+        backdrop-filter: blur(2005px);
+}
+
+.thumbnail {
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.thumbnail div {
+    background-color: white;
     width: 100%;
     height: 20rem;
-    border-radius: 0.5rem;
+    overflow: scroll;
+    overflow-x: hidden;
 }
 
 .projects_main {
@@ -306,10 +330,36 @@ section {
     align-items: center;
 }
 
+.projects_main div {
+    display: flex;
+    justify-content: space-between;
+}
+
 .projects_main p {
     font-size: 1rem;
 }
 
-.projects_main h4 {
+.project_view_code {
+    font-family: var(--second-font);
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.projects_link {
     margin-bottom: 0.5rem;
+    display: flex;
+    gap: 0.2rem;
+}
+
+/* footer */
+.footer_icons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2.1rem;
+}
+
+footer span {
+    font-size: 3rem !important;
 }

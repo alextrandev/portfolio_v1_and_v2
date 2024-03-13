@@ -5,7 +5,7 @@
     <title>Alex's portfolio</title>
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20,400,0,0" />
   </head>
 
   <body>
@@ -24,7 +24,7 @@
           <li><a href="#about_me">About me</a></li>
           <li><a href="#resume">Resume</a></li>
           <li><a href="#projects">Projects</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a class="contact">Contact</a></li>
         </ul>
       </nav>
     </header>
@@ -39,7 +39,7 @@
             and a Full-stack<br />
             Web Developer
           </h1>
-          <button class="contact_button">
+          <button class="contact contact_button">
             <img src="images/icon_click.png" alt="Contact button" />
             <span>Get in touch</span>
           </button>
@@ -122,24 +122,6 @@
         </container>
       </section>
       <!--End of skill section-->
-
-      <!--About me section-->
-      <section id="about_me">
-        <img class="about_me_img" src="images/profile_picture_2.webp" atl="Picture of me" />
-        <container>
-          <h2>About me</h2>
-          <p>
-            - I am a <strong>Full-stack web developer </strong>based in Helsinki, Finland with <strong>2 years</strong> experiences with <strong>CMS</strong> and <strong>front-end</strong> development.<br />
-            - I am currently pursuing the Full-stack developer - React, Drupal at <strong>Business College Helsinki</strong>.<br />
-            - I am looking for an internship / traineeship / junior software developer position.
-          </p>
-          <button class="contact_button">
-            <img src="images/icon_click.png" alt="Contact button" />
-            <span>Get in touch</span>
-          </button>
-        </container>
-      </section>
-      <!--End of about me section-->
 
       <!--Resume section-->
       <h2>My resume</h2>
@@ -229,52 +211,122 @@
       </section>
       <!--End of resume section-->
 
+      <!--About me section-->
+      <section id="about_me">
+        <img class="about_me_img" src="images/profile_picture_2.webp" atl="Picture of me" />
+        <container>
+          <h2>About me</h2>
+          <p>
+            - I am a <strong>Full-stack web developer </strong>based in Helsinki, Finland with <strong>2 years</strong> experiences with <strong>CMS</strong> and <strong>front-end</strong> development.<br />
+            - I am currently pursuing the Full-stack developer - React, Drupal at <strong>Business College Helsinki</strong>.<br />
+            - I am looking for an internship / traineeship / junior software developer position.
+          </p>
+          <button class="contact contact_button">
+            <img src="images/icon_click.png" alt="Contact button" />
+            <span>Get in touch</span>
+          </button>
+        </container>
+      </section>
+      <!--End of about me section-->
+
       <!--Projects section-->
       <h2>Take a look at my projects</h2>
       <section id="projects">
         <container>
+          <!-- carwash -->
           <div>
-            <img src="" alt="" />
+            <a href="https://www.carwash.fi/" target="_blank">
+              <div class="thumbnail">
+                <div>
+                  <img src="images/thumbnail_carwash.png" alt="carwash page thumbnail" />
+                </div>
+              </div>
+            </a>
             <div class="projects_main">
-              <div class="project_link">
-                <h4>
-                  Carwash.fi
+              <div>
+                <a href="https://www.carwash.fi/" target="_blank" class="project_link">
+                  <h4>Carwash.fi</h4>
                   <span class="material-symbols-outlined"> open_in_new</span>
-                </h4>
+                </a>
               </div>
               <p><strong>["HTML", "CSS", "Javascript"]</strong></p>
               <p><strong>Description:</strong> A marketing page I made for the Carwash Suomi franchise.</p>
-              <p><strong>Feature:</strong> Landings page for each carwash store with marketing information and a booking system. A hub to browse all carwash stores.</p>
+              <p><strong>Features:</strong> Landings page for each carwash store with marketing information and a booking system. A hub to browse all carwash stores.</p>
             </div>
           </div>
+          <!-- Cars database -->
           <div>
-            <img src="" alt="" />
+            <a href="https://alextran.dev/cars_database/" target="_blank">
+              <div class="thumbnail">
+                <div>
+                  <img src="images/thumbnail_cars_database.png" alt="Cars database site thumbnail" />
+                </div>
+              </div>
+            </a>
             <div class="projects_main">
               <div>
-                <h4>Cars database</h4>
-                <a href="http://">View Github</a>
+                <a class="project_link" href="https://alextran.dev/cars_database/" target="_blank">
+                  <h4>Cars database</h4>
+                  <span class="material-symbols-outlined"> open_in_new</span>
+                </a>
+                <a class="project_view_code" href="https://github.com/dk10119/personal_projects/tree/main/cars_database" target="_blank">
+                  <u>View code</u>
+                  <i class="devicon-github-original colored"></i>
+                </a>
               </div>
               <p><strong>["HTML", "CSS", "Javascript"]</strong></p>
               <p><strong>Description:</strong> A page to store and search for cars infos</p>
-              <p><strong>Feature:</strong> Add, store and read car infos from JSON file. Search for a car using any info field</p>
+              <p><strong>Features:</strong> Add, store and read car infos from JSON file. Search for a car using any info field</p>
             </div>
           </div>
+          <!-- Countries info -->
           <div>
-            <img src="" alt="" />
+            <a href="https://alextran.dev/country_info/" target="_blank">
+              <div class="thumbnail">
+                <div>
+                  <img src="images/thumbnail_country_info.png" alt="Country info page thumbnail" />
+                </div>
+              </div>
+            </a>
             <div class="projects_main">
-              <h4>Carwash.fi</h4>
-              <p><strong>["HTML/CSS", "Javascript"]</strong></p>
-              <p><strong>Description:</strong> A marketing page I made for the Carwash Suomi franchise.</p>
-              <p><strong>Feature:</strong> Landings page for each carwash store with marketing information and a booking system. A hub to browse all carwash stores.</p>
+              <div>
+                <a class="project_link" href="https://alextran.dev/country_info/" target="_blank">
+                  <h4>Countries info</h4>
+                  <span class="material-symbols-outlined"> open_in_new</span>
+                </a>
+                <a class="project_view_code" href="https://github.com/dk10119/personal_projects/tree/main/country_info" target="_blank">
+                  <u>View code</u>
+                  <i class="devicon-github-original colored"></i>
+                </a>
+              </div>
+              <p><strong>["HTML", "CSS", "Javascript", "REST api"]</strong></p>
+              <p><strong>Description:</strong> A page to learn about all countries in the world</p>
+              <p><strong>Features:</strong> View all countries, sort countries by continent and view various infos about each country.</p>
             </div>
           </div>
+          <!-- pancake shop -->
           <div>
-            <img src="" alt="" />
+            <a href="https://alextran.dev/pancake_shop/" target="_blank">
+              <div class="thumbnail">
+                <div>
+                  <img src="images/thumbnail_pancake_shop.png" alt="Pancake shop web thumbnail" />
+                </div>
+              </div>
+            </a>
             <div class="projects_main">
-              <h4>Carwash.fi</h4>
-              <p><strong>["HTML/CSS", "Javascript"]</strong></p>
-              <p><strong>Description:</strong> A marketing page I made for the Carwash Suomi franchise.</p>
-              <p><strong>Feature:</strong> Landings page for each carwash store with marketing information and a booking system. A hub to browse all carwash stores.</p>
+              <div>
+                <a class="project_link" href="https://alextran.dev/pancake_shop/" target="_blank">
+                  <h4>Pancake shop</h4>
+                  <span class="material-symbols-outlined"> open_in_new</span>
+                </a>
+                <a class="project_view_code" href="https://github.com/dk10119/personal_projects/tree/main/pancake_shop" target="_blank">
+                  <u>View code</u>
+                  <i class="devicon-github-original colored"></i>
+                </a>
+              </div>
+              <p><strong>["HTML", "CSS", "Javascript"]</strong></p>
+              <p><strong>Description:</strong> A place for pancake lovers to customize and order pancakes</p>
+              <p><strong>Features:</strong>Customize pancake, see the pancake preview change with your selections and place order.</p>
             </div>
           </div>
         </container>
@@ -284,7 +336,24 @@
 
     <!--Footer: form-->
     <footer>
-      <h2>Contact me</h2>
+      <container>
+        <img src="images/logo_alex.svg" />
+        <div>
+          <p>Copyright&copy;</p>
+          <strong style="color: #edafb8">Alex Tran</strong>
+        </div>
+      </container>
+      <div class="footer_icons">
+        <a href="mailto:tranduclong092@gmail.com">
+          <span class="material-symbols-outlined"> mail </span>
+        </a>
+        <a href="https://www.linkedin.com/in/tduclong/" target="_blank">
+          <i class="devicon-linkedin-plain"></i>
+        </a>
+        <a href="https://github.com/dk10119" target="_blank">
+          <i class="devicon-github-original"></i>
+        </a>
+      </div>
     </footer>
     <!--End of footer-->
   </body>
