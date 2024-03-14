@@ -211,8 +211,42 @@ footer div a:hover,
     margin: 1.5rem 0 1.5rem 0;
 }
 
-.hero_img {
+.hero_img_container {
     width: 25rem;
+}
+
+.hero_img_container img {
+    width: 25rem;
+    position: absolute;
+    top: 12rem;
+    filter:drop-shadow(0 0 5px var(--secondary-color));
+    transition: 1s ease-in-out;
+}
+
+.hero_img_container:hover img:last-child{
+    scale: 1.05;
+    rotate: -0.5deg;
+    transform-origin: bottom;
+    filter: drop-shadow(0 0 30px var(--light-color)) drop-shadow(0 0 2px var(--tetriary-color));
+    transition: 1s ease-in-out;
+}
+
+.hero_img_container img:nth-child(2) {
+    display: none;
+}
+
+.hero_img_container:hover img:nth-child(2){
+    display: block;
+    transition: 1s ease-in-out;
+    z-index: 6;
+}
+
+.hero_img_container:hover img:first-child{
+    scale: 1.05;
+    rotate: -0.5deg;
+    transform-origin: bottom;
+    filter: brightness(2) drop-shadow(0 0 10px --secondary-color);
+    transition: 1s ease-in-out;
 }
 
 .contact_button {
@@ -283,6 +317,15 @@ footer div a:hover,
     background-color: var(--background-color);
     border-radius: 0.75rem;
     overflow: hidden;
+    transition: 1s ease-in-out;
+}
+
+.skill_card:hover,
+.resume_card:hover {
+    scale: 1.1;
+    rotate: 1deg;
+    box-shadow: 0 0 10px gray;
+    transition: 1s ease-in-out;
 }
 
 .skill_card_header {
@@ -330,6 +373,7 @@ footer div a:hover,
     border-radius: 0.5rem;
     overflow: hidden;
     box-shadow: 0 0 5px gray;
+    transition: 1s ease-in-out;
 }
 
 .resume_header {
