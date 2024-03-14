@@ -161,6 +161,26 @@ section {
     margin-right: 0.5rem;
 }
 
+.contact_icons {
+    background-color: var(--light-color);
+    padding: 0 1rem 0 1rem;
+    display: inline-block;
+    border-radius: 0 0 4px 4px;
+}
+
+.contact_icons div {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    font-size: 2.1rem;
+}
+
+.contact_icons span {
+    font-size: 3rem !important;
+}
+
+
+
 /* skills section */
 #skills {
     padding-top: 5rem;
@@ -294,7 +314,7 @@ section {
 }
 
 #about_me button {
-    margin: 1rem;
+    margin-top: 1rem;
 }
 
 /* projects section */
