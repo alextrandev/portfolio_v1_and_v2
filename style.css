@@ -93,6 +93,17 @@ nav ul li a {
     padding: 0.5rem;
 }
 
+.header_icons {
+    padding-left: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem
+}
+
+.header_icons a {
+    padding: 0;
+}
+
 /* main */
 main {
     display: flex;
@@ -261,6 +272,7 @@ section {
     gap: 2rem;
     border-radius: 0.2rem;
     padding-bottom: 10rem;
+    padding-top: 5rem;
 }
 
 .about_me_img {
@@ -291,7 +303,9 @@ section {
         180deg,
         transparent 50%,
         var(--primary-color)
-    )
+    );
+    display: flex;
+    flex-direction: column;
 }
 
 #projects container {
@@ -299,6 +313,7 @@ section {
     grid-template-columns: 1fr 1fr;
     width: 100%;
     gap: 2rem;
+    margin-top: 2rem;
 }
 
 #projects img {
