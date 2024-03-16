@@ -1,6 +1,12 @@
+const hamburgerButton = document.querySelector(".hamburger_menu");
+const navBar = document.querySelector("nav");
 const contactButton1 = document.querySelector("#contact_1");
 const contactButton2 = document.querySelector("#contact_2");
 const backToTopButton = document.querySelector("#back_to_top");
+
+const toggleNavResponsive = () => {
+  navBar.classList.toggle("responsive");
+};
 
 const contactLinkToggle = (id) => {
   const link1 = id.nextElementSibling.querySelector("div a");
@@ -19,3 +25,4 @@ backToTopButton.addEventListener("click", () => {
 
 contactButton1.addEventListener("click", () => contactLinkToggle(contactButton1));
 contactButton2.addEventListener("click", () => contactLinkToggle(contactButton2));
+hamburgerButton.addEventListener("click", toggleNavResponsive);
