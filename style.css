@@ -277,7 +277,7 @@ footer div a:hover,
 }
 
 .contact_button img {
-    width: 20px;
+    width: 20px !important;
     margin-right: 0.5rem;
 }
 
@@ -618,7 +618,7 @@ footer container p:last-child {
 #back_to_top {
     bottom: 5rem;
     opacity: 70%;
-    right: -4.5rem;
+    right: -4.7rem;
 }
 }
 
