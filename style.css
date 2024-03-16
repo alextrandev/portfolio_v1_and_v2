@@ -560,7 +560,6 @@ footer container p:last-child {
 
     
 @media (max-width: 1000px) {
-
 .hero_img_container img {
     margin-top: 4rem;
 }
@@ -604,6 +603,10 @@ footer container p:last-child {
     text-align: center;
 }
 
+#about_me img {
+    width: 80%;
+}
+
 #about_me .contact_icons {
     position:relative;
 }
@@ -611,7 +614,14 @@ footer container p:last-child {
 #projects container {
     grid-template-columns: 1fr;
 }
+
+#back_to_top {
+    bottom: 5rem;
+    opacity: 70%;
+    right: -4.5rem;
 }
+}
+
 
 @media screen and (max-width: 768px) {
 #hero {
